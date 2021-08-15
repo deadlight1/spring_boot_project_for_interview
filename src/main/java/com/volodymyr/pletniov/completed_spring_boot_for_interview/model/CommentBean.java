@@ -19,7 +19,7 @@ public final class CommentBean {
     @NotBlank
     private String authorId;
 
-    @ManyToOne
+    @OneToMany
     private PostBean postBean;
 
 }

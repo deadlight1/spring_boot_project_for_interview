@@ -2,10 +2,7 @@ package com.volodymyr.pletniov.completed_spring_boot_for_interview.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.Set;
@@ -26,6 +23,6 @@ public final class PostBean {
     private String content;
     private Integer code;
 
-    @OneToMany
+    @ManyToOne
     private Set<CommentBean> commentBeans;
 }
